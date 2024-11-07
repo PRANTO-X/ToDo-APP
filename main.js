@@ -2,6 +2,31 @@ let tasks =[];
 let addBtn=document.getElementById("add-btn");
 let inputBox=document.getElementById("input-box");
 let taskList=document.querySelector(".task-list");
+let delBtn=document.getElementById("del-btn");
+
+
+delBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const taskItems = document.querySelectorAll('.task-item');
+    const totalTasks = taskItems.length;
+    let completedAnimations = 0;
+
+    taskItems.forEach((task, index) => {
+        task.classList.add('slide-out');
+        task.addEventListener('animationend', () => {
+            tasks.splice(index, 1);
+            completedAnimations++;
+
+            if (completedAnimations === totalTasks) {
+                tasks.splice(0, tasks.length); 
+                taskList.innerHTML = ''; 
+                updateStats();
+                updateTaskList();
+                saveTasks();
+            }
+        });
+    });
+});
 
 document.addEventListener('DOMContentLoaded',()=>{
     const storedTasks = JSON.parse(localStorage.getItem('tasks'));

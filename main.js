@@ -20,6 +20,7 @@ delBtn.addEventListener('click', (e) => {
             if (completedAnimations === totalTasks) {
                 tasks.splice(0, tasks.length); 
                 taskList.innerHTML = ''; 
+                progress.style.width= 0;
                 updateStats();
                 updateTaskList();
                 saveTasks();

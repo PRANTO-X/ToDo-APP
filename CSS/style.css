@@ -108,6 +108,10 @@ form button{
     -webkit-tap-highlight-color: transparent;
 }
 
+form button i{
+    font-size: 30px;
+}
+
 
 .task-list{
     display: flex;

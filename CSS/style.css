@@ -270,7 +270,17 @@ form button i{
     form {
         gap: 7px;
     }
+    
+     form button{
+        height: 40px;
+        width: 40px;
+        font-size: 30px;
+    }
 
+    form button i{
+        font-size: 25px;
+    }
+    
     .task {
         font-size: 16px;
     }

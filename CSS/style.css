@@ -187,11 +187,13 @@ form button i{
     gap: 15px;
     cursor: pointer;
     margin-right: 15px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .icon i{
     font-size: 22px;
     color: var(--color-1);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .task-item.completed-item{
@@ -269,6 +271,7 @@ form button i{
 
     form {
         gap: 7px;
+        margin-top: 50px;
     }
     
      form button{

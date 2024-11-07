@@ -139,6 +139,7 @@ form button i{
     margin-left: 10px;
     gap: 10px;
     text-transform: capitalize;
+    overflow: hidden;
 }
 
 .check-box {
@@ -172,10 +173,9 @@ form button i{
     left: 6px;
 }
 
-
-
 .task p{
     margin: 15px 0;
+    overflow: hidden;
 }
 
 .task input{
@@ -187,6 +187,7 @@ form button i{
     gap: 15px;
     cursor: pointer;
     margin-right: 15px;
+    margin-left: 10px;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -286,6 +287,10 @@ form button i{
     
     .task {
         font-size: 16px;
+    }
+    
+    .icon{
+        margin-left: 8px;
     }
 
     .icon i {

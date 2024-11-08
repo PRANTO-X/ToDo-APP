@@ -14,7 +14,6 @@ delBtn.addEventListener('click', (e) => {
     taskItems.forEach((task, index) => {
         task.classList.add('slide-out');
         task.addEventListener('animationend', () => {
-            tasks.splice(index, 1);
             completedAnimations++;
 
             if (completedAnimations === totalTasks) {
@@ -63,7 +62,6 @@ const deleteTask = (index) => {
   const deleteTaskItem = taskList.children[index];
   deleteTaskItem.classList.add('slide-out');
 
-  // Wait for the animation to finish before deleting the task
   deleteTaskItem.addEventListener('animationend', () => {
       tasks.splice(index,1);
       updateTaskList();
@@ -86,7 +84,7 @@ const updateStats = ()=>{
     let completeTask = tasks.filter((task)=>task.completed).length;
     let totalTask=tasks.length;
 
-    let progressValue = (completeTask/totalTask)*100;
+   let progressValue = totalTask === 0 ? 0 : (completeTask / totalTask) * 100;
     progress.style.width=`${progressValue}%`;
 
     let number = document.getElementById('number');
